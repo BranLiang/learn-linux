@@ -27,7 +27,8 @@ int main(int argc, char *argv[])
     }
 
     openFlags = O_CREAT | O_WRONLY | O_TRUNC;
-    filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH; /* rw-rw-rw- */
+    /* owner read/write, group read/write, other read/write */
+    filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
 
     outputFd = open(argv[2], openFlags, filePerms);
     if (outputFd == -1)
