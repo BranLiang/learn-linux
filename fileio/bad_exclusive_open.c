@@ -12,6 +12,12 @@ int main(int argc, char *argv[])
     }
     else
     {
+        if (argc > 2)
+        {
+            sleep(5);
+            printf("[PID %ld] Done sleeping", (long) getpid());
+        }
+
         fd = open(argv[1], O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
         if (fd == -1)
         {
