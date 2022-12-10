@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-EXE = 5_14_2
+EXE = 5_14_2 5_14_6
 
 all : ${EXE}
 
