@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-GEN_EXE = display_env
+GEN_EXE = display_env modify_env
 
 EXE = ${GEN_EXE}
 
